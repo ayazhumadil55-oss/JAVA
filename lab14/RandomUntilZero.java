@@ -1,16 +1,14 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class RandomUntilZero {
     public static void main(String[] args) {
-        int number;
+        Random rand = new Random();
+        int num;
 
         do {
-            number = (int)(Math.random() * 10); // 0-9
-            System.out.println(number);
-        } while (number != 0);
-
-        System.out.println("0 шықты, тоқтады.");
+            num = rand.nextInt(10); // 0-9
+            System.out.println(num);
+        } while (num != 0);
     }
 }
-
-

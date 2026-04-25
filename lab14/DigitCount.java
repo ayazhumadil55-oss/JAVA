@@ -2,17 +2,15 @@ import java.util.Scanner;
 
 public class DigitCount {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Сан енгізіңіз: ");
-        int number = scanner.nextInt();
-
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
         int count = 0;
-        do {
-            number /= 10;
-            count++;
-        } while (number != 0);
 
-        System.out.println(STR."Цифрлар саны: \{count}");
+        while (num != 0) {
+            num /= 10;
+            count++;
+        }
+
+        System.out.println("Цифр саны: " + count);
     }
 }
-

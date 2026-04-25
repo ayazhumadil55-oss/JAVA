@@ -2,17 +2,16 @@ import java.util.Scanner;
 
 public class SumUntilZero {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        int num;
+        int sum = 0;
 
-        int sum = 0, number;
-        do {
-            System.out.print("Сан енгізіңіз (0 тоқтатады): ");
-            number = scanner.nextInt();
-            sum += number;
-        } while (number != 0);
+        while (true) {
+            num = sc.nextInt();
+            if (num == 0) break;
+            sum += num;
+        }
 
-        System.out.println(STR."Қосынды: \{sum}");
+        System.out.println("Қосынды: " + sum);
     }
 }
-
-

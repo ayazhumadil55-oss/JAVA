@@ -2,23 +2,21 @@ import java.util.Scanner;
 
 public class Palindrome {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Сан енгізіңіз: ");
-        int number = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int original = num;
+        int reversed = 0;
 
-        int original = number, reversed = 0;
+        while (num > 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num /= 10;
+        }
 
-        do {
-            reversed = reversed * 10 + number % 10;
-            number /= 10;
-        } while (number > 0);
-
-        if (original == reversed)
+        if (original == reversed) {
             System.out.println("Палиндром");
-        else
+        } else {
             System.out.println("Палиндром емес");
+        }
     }
 }
-
-
-

@@ -2,17 +2,11 @@ import java.util.Scanner;
 
 public class MultiplicationTable {
     public static void main(String[] args) {
-        int i = 1;
-        do {
-            int j = 1;
-            do {
-                System.out.print(STR."\{i * j}\t");
-                j++;
-            } while (j <= 10);
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                System.out.print(i * j + "\t");
+            }
             System.out.println();
-            i++;
-        } while (i <= 10);
+        }
     }
 }
-
-
